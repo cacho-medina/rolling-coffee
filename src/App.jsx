@@ -1,9 +1,16 @@
 //import "./App.css";
+import NavBar from "./components/common/NavBar";
+import Footer from "./components/common/Footer";
+import Home from "./components/pages/Home";
+//import Admin from "./components/pages/Admin";
 
 function App() {
     return (
         <>
-            <h1>title</h1>
+            <NavBar />
+            <Home />
+            {/* <Admin /> */}
+            <Footer />
         </>
     );
 }
