@@ -12,11 +12,17 @@ function NavBar() {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-auto text-center">
+                    <Nav className="ms-auto text-center align-items-center">
                         <Nav.Link href="#home">Inicio</Nav.Link>
                         <Nav.Link href="#features">Admin</Nav.Link>
-                        <Nav.Link href="#pricing">Sign up</Nav.Link>
-                        <Nav.Link href="#pricing">Login</Nav.Link>
+                        <Nav.Link href="#pricing">
+                            <span className="btn btn-outline-secondary">
+                                Sign up
+                            </span>
+                        </Nav.Link>
+                        <Nav.Link href="#pricing">
+                            <span className="btn btn-secondary">Login</span>
+                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

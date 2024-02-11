@@ -1,5 +1,5 @@
 import banner from "../../assets/banner.png";
-import Productos from "../common/Productos";
+import Productos from "./producto/Productos";
 
 function Home() {
     return (
