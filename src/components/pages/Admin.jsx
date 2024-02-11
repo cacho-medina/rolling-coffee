@@ -10,18 +10,16 @@ function Admin() {
             <div className="d-flex justify-content-between align-items-center">
                 <h1 className="display-3 fw-medium">Productos Disponibles</h1>
                 <Button variant="primary">
-                    <FiFilePlus />
+                    <FiFilePlus /> Agregar
                 </Button>
             </div>
             <hr />
             <Table
-                striped
-                bordered
                 hover
                 responsive
                 className="shadow overflow-x-hidden align-middle text-center"
             >
-                <thead>
+                <thead className="table-success">
                     <tr>
                         <th>cod</th>
                         <th>Producto</th>

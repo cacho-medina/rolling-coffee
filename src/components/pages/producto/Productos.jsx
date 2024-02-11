@@ -6,7 +6,7 @@ function Productos() {
             <h2 className="display-2 text-center">Nuestros Productos</h2>
             <hr />
             <div className="container-fluid">
-                <div className="row justify-content-center align-items-center gap-2 px-2">
+                <div className="row justify-content-center align-items-center gap-3 px-2">
                     <CardProducto></CardProducto>
                     <CardProducto></CardProducto>
                     <CardProducto></CardProducto>

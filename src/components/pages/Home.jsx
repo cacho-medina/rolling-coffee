@@ -1,13 +1,14 @@
 import banner from "../../assets/banner.png";
 import Productos from "./producto/Productos";
+//import banner2 from "../../assets/banner2.jpg";
 
 function Home() {
     return (
-        <main>
+        <main className="grow">
             <img
                 src={banner}
                 alt="banner rolling coffee"
-                className="img-fluid"
+                className="max object-fit-cover"
             />
             <Productos></Productos>
         </main>

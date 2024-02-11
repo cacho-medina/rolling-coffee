@@ -1,10 +1,11 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import cafe from '../../../assets/cafe.jpg'
 
 function BasicExample() {
     return (
         <Card className="p-0 col-12 col-sm-5 col-lg-3 shadow">
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Img variant="top" src={cafe} />
             <Card.Body>
                 <Card.Title>Cafe americano</Card.Title>
                 <Card.Text>
