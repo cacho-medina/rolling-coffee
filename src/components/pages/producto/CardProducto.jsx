@@ -1,6 +1,6 @@
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import cafe from '../../../assets/cafe.jpg'
+import cafe from "../../../assets/cafe.jpg";
+import { Link } from "react-router-dom";
 
 function BasicExample() {
     return (
@@ -14,7 +14,9 @@ function BasicExample() {
                 <Card.Text className="fw-bold">Precio: $250</Card.Text>
             </Card.Body>
             <Card.Footer className="d-flex justify-content-end">
-                <Button variant="success">Ver Mas</Button>
+                <Link to="/producto/1" className="btn btn-success">
+                    Ver Mas
+                </Link>
             </Card.Footer>
         </Card>
     );
