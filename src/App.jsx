@@ -4,14 +4,17 @@ import Footer from "./components/common/Footer";
 import Home from "./components/pages/Home";
 import Admin from "./components/pages/Admin";
 import Error from "./components/pages/Error";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
     return (
         <>
             <NavBar />
-            {/* <Home /> */}
-            <Admin />
-            {/* <Error /> */}
+            <Routes>
+                <Route exact path="/" element={<Home />} />
+                <Route exact path="/administrador" element={<Admin />} />
+                <Route path="*" element={<Error />} />
+            </Routes>
             <Footer />
         </>
     );

@@ -3,14 +3,14 @@ import Productos from "./producto/Productos";
 
 function Home() {
     return (
-        <div>
+        <main>
             <img
                 src={banner}
                 alt="banner rolling coffee"
                 className="img-fluid"
             />
             <Productos></Productos>
-        </div>
+        </main>
     );
 }
 
