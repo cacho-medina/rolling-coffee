@@ -2,16 +2,19 @@ import Container from "react-bootstrap/Container";
 import Table from "react-bootstrap/Table";
 import Options from "./options/Options";
 import { FiFilePlus } from "react-icons/fi";
-import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 function Admin() {
     return (
         <Container className="grow">
             <div className="d-flex justify-content-between align-items-center">
                 <h1 className="display-3 fw-medium">Productos Disponibles</h1>
-                <Button variant="primary">
+                <Link
+                    to="/administrador/crearProducto"
+                    className="btn btn-primary"
+                >
                     <FiFilePlus /> Agregar
-                </Button>
+                </Link>
             </div>
             <hr />
             <Table
