@@ -3,9 +3,6 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
 
-const regex =
-    /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/gm;
-
 function CrearProducto() {
     const {
         register,
@@ -78,7 +75,7 @@ function CrearProducto() {
                         {...register("imagen", {
                             required: "ingrese una url de imagen",
                             pattern: {
-                                value: regex,
+                                value: /(http)?s?:?(\/\/[^"']*\.(?:png|jpg|jpeg|gif|png|svg))/i,
                                 message: "ingrese una url válida",
                             },
                         })}
@@ -94,7 +91,6 @@ function CrearProducto() {
                     <Form.Select
                         {...register("categoria", {
                             required: "Seleccione una categoria",
-                            validate: (value) => value !== "",
                         })}
                     >
                         <option value="">Seleccione una opcion</option>
