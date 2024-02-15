@@ -1,20 +1,30 @@
 {
-    "productos": [
-        {
-            "nombre": "café",
-            "precio": 1500,
-            "categoria": "bebida caliente",
-            "descBreve": "un rico cafecito",
-            "descAmplia": "un rico cafecito",
-            "imagen": "url",
-            "disponible": true,
-            "id": "1"
-        }
-    ],
-    "usuarios": [
-        {
-            "email": "admin@mail.com",
-            "password": "admin123"
-        }
-    ]
+  "productos": [
+    {
+      "nombre": "café",
+      "precio": 1500,
+      "categoria": "bebida caliente",
+      "descBreve": "un rico cafecito",
+      "descAmplia": "un rico cafecito",
+      "imagen": "url",
+      "disponible": true,
+      "id": "1"
+    },
+    {
+      "id": "8fba",
+      "nombre": "cafe",
+      "precio": "150",
+      "imagen": "https://pbs.twimg.com/media/F07sdG5WYAsON3h.jpg",
+      "categoria": "infusiones",
+      "descBreve": "cafe rico y goof",
+      "descAmplia": "cafe rico y god. Porveniendeajfklfjkhjfashkjlfhdsjnhxskjdhcfnsle"
+    }
+  ],
+  "usuarios": [
+    {
+      "email": "admin@mail.com",
+      "password": "admin123",
+      "id": "d670"
+    }
+  ]
 }

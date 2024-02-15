@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
+import { crear } from "../../../../helpers/queries";
 
 function CrearProducto() {
     const {
@@ -10,8 +11,9 @@ function CrearProducto() {
         formState: { errors },
     } = useForm();
 
-    const onSubmit = (data) => {
-        console.log(data);
+    const onSubmit = async (data) => {
+        const res = await crear(data);
+        console.log(res);
         alert("Producto agregado con exito!");
     };
 

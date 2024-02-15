@@ -2,6 +2,7 @@ import Card from "react-bootstrap/Card";
 import cafe from "../../../assets/cafe.jpg";
 import { Link } from "react-router-dom";
 
+
 function BasicExample() {
     return (
         <Card className="p-0 col-12 col-sm-5 col-lg-3 shadow">
