@@ -3,18 +3,32 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
 import { crear } from "../../../../helpers/queries";
+import Swal from "sweetalert2";
 
 function CrearProducto() {
     const {
         register,
         handleSubmit,
         formState: { errors },
+        reset,
     } = useForm();
 
     const onSubmit = async (data) => {
         const res = await crear(data);
-        console.log(res);
-        alert("Producto agregado con exito!");
+        if (res.status !== 201) {
+            Swal.fire({
+                title: "Error",
+                text: "Algo salio mal!",
+                icon: "error",
+            });
+        } else {
+            Swal.fire({
+                title: "Listo!",
+                text: "Producto agregado con exito!",
+                icon: "success",
+            });
+            reset();
+        }
     };
 
     return (

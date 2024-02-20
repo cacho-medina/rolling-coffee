@@ -18,6 +18,15 @@
       "categoria": "infusiones",
       "descBreve": "cafe rico y goof",
       "descAmplia": "cafe rico y god. Porveniendeajfklfjkhjfashkjlfhdsjnhxskjdhcfnsle"
+    },
+    {
+      "id": "73d7",
+      "nombre": "smootie",
+      "precio": "3500",
+      "imagen": "https://m.media-amazon.com/images/S/pv-target-images/474e9c9745be9888998204cab278dd0f2009da2f19e4ce30b38e1b9f1f96ad66.jpg",
+      "categoria": "batidos",
+      "descBreve": "smootie de tu hermana",
+      "descAmplia": "nose porque pingo le dicen smootie si es un licuado ura no sean tan payasos porfa dale?"
     }
   ],
   "usuarios": [
