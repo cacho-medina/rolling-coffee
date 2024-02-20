@@ -1,10 +1,23 @@
 import Container from "react-bootstrap/Container";
 import Table from "react-bootstrap/Table";
-import Options from "./options/Options";
+import ItemProd from "./producto/ItemProd";
 import { FiFilePlus } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { getProductos } from "../../helpers/queries";
+import { useState, useEffect } from "react";
 
 function Admin() {
+    const [productos, setProductos] = useState([]);
+    const obtenerProd = async () => {
+        const res = await getProductos();
+        if (res.status === 200) {
+            const data = await res.json();
+            setProductos(data);
+        }
+    };
+    useEffect(() => {
+        obtenerProd();
+    }, []);
     return (
         <Container className="grow">
             <div className="d-flex justify-content-between align-items-center">
@@ -33,26 +46,9 @@ function Admin() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>cod</td>
-                        <td>1</td>
-                        <td>$0</td>
-                        <td>www.example.com</td>
-                        <td>cafe</td>
-                        <td>
-                            <Options />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>cod</td>
-                        <td>1</td>
-                        <td>$0</td>
-                        <td>www.example.com</td>
-                        <td>cafe</td>
-                        <td>
-                            <Options />
-                        </td>
-                    </tr>
+                    {productos?.map((item) => {
+                        return <ItemProd producto={item} key={item.id} />;
+                    })}
                 </tbody>
             </Table>
         </Container>

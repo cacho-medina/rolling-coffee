@@ -1,7 +1,5 @@
 const URI_Producto = import.meta.env.VITE_API_PRODUCTO;
 
-console.log(URI_Producto);
-
 export const crear = async (productoNuevo) => {
     try {
         const res = await fetch(URI_Producto, {
@@ -12,6 +10,15 @@ export const crear = async (productoNuevo) => {
             body: JSON.stringify(productoNuevo),
         });
         console.log(res);
+        return res;
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+export const getProductos = async () => {
+    try {
+        const res = await fetch(URI_Producto);
         return res;
     } catch (error) {
         console.log(error);

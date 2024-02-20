@@ -27,6 +27,15 @@
       "categoria": "batidos",
       "descBreve": "smootie de tu hermana",
       "descAmplia": "nose porque pingo le dicen smootie si es un licuado ura no sean tan payasos porfa dale?"
+    },
+    {
+      "id": "323c",
+      "nombre": "capuccino",
+      "precio": "1200",
+      "imagen": "https://image.api.playstation.com/vulcan/img/cfn/11307uYG0CXzRuA9aryByTHYrQLFz-HVQ3VVl7aAysxK15HMpqjkAIcC_R5vdfZt52hAXQNHoYhSuoSq_46_MT_tDBcLu49I.png",
+      "categoria": "infusiones",
+      "descBreve": "capuccino ricolino",
+      "descAmplia": "algo hermoso para tomar si te gusta combinar el cafe con el chocolate"
     }
   ],
   "usuarios": [
