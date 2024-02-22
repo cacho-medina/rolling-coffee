@@ -24,3 +24,5 @@ export const getProductos = async () => {
         console.log(error);
     }
 };
+
+export const deleteProductos = async () => {};
