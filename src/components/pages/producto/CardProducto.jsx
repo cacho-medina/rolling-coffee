@@ -4,10 +4,14 @@ import { Link } from "react-router-dom";
 function CardProducto({ producto }) {
     const { nombre, precio, imagen, descBreve, id } = producto;
     return (
-        <Card className="p-0 col-12 col-sm-5 col-lg-3 shadow">
+        <Card
+            className="p-0 col-12 col-sm-5 col-lg-3 shadow"
+            style={{ height: "500px" }}
+        >
             <Card.Img
                 variant="top"
                 src={imagen}
+                style={{ maxHeight: "50%" }}
                 className="img-fluid object-fit-cover"
             />
             <Card.Body>
