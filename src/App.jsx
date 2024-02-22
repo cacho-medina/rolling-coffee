@@ -22,6 +22,11 @@ function App() {
                 />
                 <Route
                     exact
+                    path="/administrador/editarProducto/:id"
+                    element={<Formulario />}
+                />
+                <Route
+                    exact
                     path="/producto/:id"
                     element={<DetalleProducto />}
                 />

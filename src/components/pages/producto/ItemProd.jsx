@@ -49,7 +49,7 @@ function ItemProd({ producto, setProductos }) {
                 </td>
                 <td>{categoria}</td>
                 <td className="d-flex align-items-center justify-content-center gap-1">
-                    <Options deleteProducto={deleteProducto} />
+                    <Options deleteProducto={deleteProducto} id={id}/>
                 </td>
             </tr>
         </>
