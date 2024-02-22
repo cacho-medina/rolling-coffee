@@ -2,15 +2,19 @@ import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
-import { crear } from "../../../../helpers/queries";
+import { crear, getProductoById } from "../../../../helpers/queries";
 import Swal from "sweetalert2";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 function CrearProducto({ editar, title }) {
+    const { id } = useParams();
     const {
         register,
         handleSubmit,
         formState: { errors },
         reset,
+        setValue,
     } = useForm();
     const onSubmit = async (data) => {
         if (editar) {
@@ -33,6 +37,25 @@ function CrearProducto({ editar, title }) {
             }
         }
     };
+
+    const cargarProducto = async () => {
+        const res = await getProductoById(id);
+        if (res.status === 200) {
+            const dataProducto = await res.json();
+            setValue("nombre", dataProducto.nombre);
+            setValue("precio", dataProducto.precio);
+            setValue("imagen", dataProducto.imagen);
+            setValue("categoria", dataProducto.categoria);
+            setValue("descBreve", dataProducto.descBreve);
+            setValue("descAmplia", dataProducto.descAmplia);
+        }
+    };
+
+    useEffect(() => {
+        if (editar) {
+            cargarProducto();
+        }
+    }, []);
 
     return (
         <Container className="grow py-4">

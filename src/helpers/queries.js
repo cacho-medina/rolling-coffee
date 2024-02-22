@@ -34,3 +34,12 @@ export const deleteProductos = async (id) => {
         console.log(error);
     }
 };
+
+export const getProductoById = async (id) => {
+    try {
+        const res = await fetch(`${URI_Producto}/${id}`);
+        return res;
+    } catch (error) {
+        console.log(error);
+    }
+};
