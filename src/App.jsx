@@ -18,12 +18,16 @@ function App() {
                 <Route
                     exact
                     path="/administrador/crearProducto"
-                    element={<Formulario />}
+                    element={
+                        <Formulario editar={false} title="Nuevo Producto" />
+                    }
                 />
                 <Route
                     exact
                     path="/administrador/editarProducto/:id"
-                    element={<Formulario />}
+                    element={
+                        <Formulario editar={true} title="Editar Producto" />
+                    }
                 />
                 <Route
                     exact

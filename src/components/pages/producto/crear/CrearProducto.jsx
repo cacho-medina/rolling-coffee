@@ -5,35 +5,38 @@ import { useForm } from "react-hook-form";
 import { crear } from "../../../../helpers/queries";
 import Swal from "sweetalert2";
 
-function CrearProducto() {
+function CrearProducto({ editar, title }) {
     const {
         register,
         handleSubmit,
         formState: { errors },
         reset,
     } = useForm();
-
     const onSubmit = async (data) => {
-        const res = await crear(data);
-        if (res.status !== 201) {
-            Swal.fire({
-                title: "Error",
-                text: "Algo salio mal!",
-                icon: "error",
-            });
+        if (editar) {
+            //EDITANDO
         } else {
-            Swal.fire({
-                title: "Listo!",
-                text: "Producto agregado con exito!",
-                icon: "success",
-            });
-            reset();
+            const res = await crear(data);
+            if (res.status !== 201) {
+                Swal.fire({
+                    title: "Error",
+                    text: "Algo salio mal!",
+                    icon: "error",
+                });
+            } else {
+                Swal.fire({
+                    title: "Listo!",
+                    text: "Producto agregado con exito!",
+                    icon: "success",
+                });
+                reset();
+            }
         }
     };
 
     return (
         <Container className="grow py-4">
-            <h1 className="display-2 text-center">Nuevo Producto</h1>
+            <h1 className="display-2 text-center">{title}</h1>
             <hr />
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Form.Group className="mb-3" controlId="nombre">
