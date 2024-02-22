@@ -1,21 +1,22 @@
 import Card from "react-bootstrap/Card";
-import cafe from "../../../assets/cafe.jpg";
 import { Link } from "react-router-dom";
 
-
-function BasicExample() {
+function CardProducto({ producto }) {
+    const { nombre, precio, imagen, descBreve, id } = producto;
     return (
         <Card className="p-0 col-12 col-sm-5 col-lg-3 shadow">
-            <Card.Img variant="top" src={cafe} />
+            <Card.Img
+                variant="top"
+                src={imagen}
+                className="img-fluid object-fit-cover"
+            />
             <Card.Body>
-                <Card.Title>Cafe americano</Card.Title>
-                <Card.Text>
-                    Descripcion: Una taza de cafe suave y aromatico
-                </Card.Text>
-                <Card.Text className="fw-bold">Precio: $250</Card.Text>
+                <Card.Title>{nombre}</Card.Title>
+                <Card.Text>{descBreve}</Card.Text>
+                <Card.Text className="fw-bold">Precio: ${precio}</Card.Text>
             </Card.Body>
             <Card.Footer className="d-flex justify-content-end">
-                <Link to="/producto/1" className="btn btn-success">
+                <Link to={`/producto/${id}`} className="btn btn-success">
                     Ver Mas
                 </Link>
             </Card.Footer>
@@ -23,4 +24,4 @@ function BasicExample() {
     );
 }
 
-export default BasicExample;
+export default CardProducto;

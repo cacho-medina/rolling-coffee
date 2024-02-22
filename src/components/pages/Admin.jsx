@@ -47,7 +47,13 @@ function Admin() {
                 </thead>
                 <tbody>
                     {productos?.map((item) => {
-                        return <ItemProd producto={item} key={item.id} />;
+                        return (
+                            <ItemProd
+                                producto={item}
+                                key={item.id}
+                                setProductos={setProductos}
+                            />
+                        );
                     })}
                 </tbody>
             </Table>

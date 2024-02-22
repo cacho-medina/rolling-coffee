@@ -9,7 +9,6 @@ export const crear = async (productoNuevo) => {
             },
             body: JSON.stringify(productoNuevo),
         });
-        console.log(res);
         return res;
     } catch (error) {
         console.log(error);
@@ -25,4 +24,13 @@ export const getProductos = async () => {
     }
 };
 
-export const deleteProductos = async () => {};
+export const deleteProductos = async (id) => {
+    try {
+        const res = await fetch(`${URI_Producto}/${id}`, {
+            method: "DELETE",
+        });
+        return res;
+    } catch (error) {
+        console.log(error);
+    }
+};

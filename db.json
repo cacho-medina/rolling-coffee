@@ -1,25 +1,6 @@
 {
   "productos": [
     {
-      "nombre": "café",
-      "precio": 1500,
-      "categoria": "bebida caliente",
-      "descBreve": "un rico cafecito",
-      "descAmplia": "un rico cafecito",
-      "imagen": "url",
-      "disponible": true,
-      "id": "1"
-    },
-    {
-      "id": "8fba",
-      "nombre": "cafe",
-      "precio": "150",
-      "imagen": "https://pbs.twimg.com/media/F07sdG5WYAsON3h.jpg",
-      "categoria": "infusiones",
-      "descBreve": "cafe rico y goof",
-      "descAmplia": "cafe rico y god. Porveniendeajfklfjkhjfashkjlfhdsjnhxskjdhcfnsle"
-    },
-    {
       "id": "73d7",
       "nombre": "smootie",
       "precio": "3500",
@@ -29,13 +10,22 @@
       "descAmplia": "nose porque pingo le dicen smootie si es un licuado ura no sean tan payasos porfa dale?"
     },
     {
-      "id": "323c",
+      "id": "00f0",
+      "nombre": "Smoothie de frutos rojos",
+      "precio": "2200",
+      "imagen": "https://images.pexels.com/photos/434295/pexels-photo-434295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "categoria": "batidos",
+      "descBreve": "licuado de frutilla",
+      "descAmplia": "ndeah inventaba cualquier cosa el loco"
+    },
+    {
+      "id": "8da1",
       "nombre": "capuccino",
       "precio": "1200",
-      "imagen": "https://image.api.playstation.com/vulcan/img/cfn/11307uYG0CXzRuA9aryByTHYrQLFz-HVQ3VVl7aAysxK15HMpqjkAIcC_R5vdfZt52hAXQNHoYhSuoSq_46_MT_tDBcLu49I.png",
+      "imagen": "https://images.pexels.com/photos/10406759/pexels-photo-10406759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "categoria": "infusiones",
       "descBreve": "capuccino ricolino",
-      "descAmplia": "algo hermoso para tomar si te gusta combinar el cafe con el chocolate"
+      "descAmplia": "el mejor capu del pais locoooo lo amo a mi raid"
     }
   ],
   "usuarios": [
