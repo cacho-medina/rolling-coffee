@@ -1,35 +1,44 @@
-import Button from "react-bootstrap/Button";
+import { getProductoById } from "../../../helpers/queries";
 import Card from "react-bootstrap/Card";
-import cafe from "../../../assets/cafe.jpg";
+//import cafe from "../../../assets/cafe.jpg";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 function DetalleProducto() {
+    const { id } = useParams();
+    const [prod, setProd] = useState({});
+    const obtenerProd = async () => {
+        const res = await getProductoById(id);
+        if (res.status === 200) {
+            const data = await res.json();
+            setProd(data);
+        } else {
+            alert("Ocurrio un error al obtener el producto!");
+        }
+    };
+    useEffect(() => {
+        obtenerProd();
+    }, []);
     return (
         <div className="grow container py-3">
             <Card className="flex-md-row">
                 <div className="col col-md-6">
                     <Card.Img
-                        src={cafe}
-                        className="w-100 h-100 object-fit-cover"
+                        src={prod.imagen}
+                        className="max object-fit-cover"
                     />
                 </div>
                 <Card.Body className="col col-md-6">
                     <Card.Title className="display-6 fw-medium text-center">
-                        Card Title
+                        {prod.nombre}
                     </Card.Title>
                     <hr />
+                    <Card.Text>{prod.descAmplia}</Card.Text>
                     <Card.Text>
-                        This library embraces uncontrolled components and native
-                        HTML inputs. However, it s hard to avoid working with
-                        external controlled components such as React-Select,
-                        AntD and MUI. To make this simple, we provide a wrapper
-                        component, Controller, to streamline the integration
-                        process while still giving you the freedom to use a
-                        custom register.
-                    </Card.Text>
-                    <Card.Text>
-                        <span className="fw-bold">Categoria: </span> Infusiones{" "}
+                        <span className="fw-bold">Categoria: </span>{" "}
+                        {prod.categoria}
                         <br />
-                        <span className="fw-bold">Precio: $1000</span>
+                        <span className="fw-bold">Precio: ${prod.precio}</span>
                     </Card.Text>
                 </Card.Body>
             </Card>

@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { useForm } from "react-hook-form";
+    import { useForm } from "react-hook-form";
 import { crear, getProductoById } from "../../../../helpers/queries";
 import Swal from "sweetalert2";
 import { useEffect } from "react";

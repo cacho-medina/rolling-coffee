@@ -6,13 +6,19 @@ import Admin from "./components/pages/Admin";
 import Error from "./components/pages/Error";
 import DetalleProducto from "./components/pages/producto/detalleProducto";
 import Formulario from "./components/pages/producto/crear/CrearProducto";
+import Login from "./components/pages/Login/Login";
+import Signup from "./components/pages/Login/Signup";
 import { Routes, Route } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function App() {
+    const { pathname } = useLocation();
     return (
         <>
-            <NavBar />
+            {pathname !== "/login" && pathname !== "/signup" ? <NavBar /> : ""}
             <Routes>
+                <Route exact path="/login" element={<Login />} />
+                <Route exact path="/signup" element={<Signup />} />
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/administrador" element={<Admin />} />
                 <Route
@@ -36,7 +42,7 @@ function App() {
                 />
                 <Route path="*" element={<Error />} />
             </Routes>
-            <Footer />
+            {pathname !== "/login" && pathname !== "/signup" ? <Footer /> : ""}
         </>
     );
 }

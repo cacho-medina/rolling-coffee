@@ -20,20 +20,12 @@ function NavBar() {
                         <NavLink end to="/administrador" className="nav-link">
                             Admin
                         </NavLink>
-                        <NavLink
-                            end
-                            to="/administrador/signup"
-                            className="nav-link"
-                        >
+                        <NavLink end to="/signup" className="nav-link">
                             <span className="btn btn-outline-secondary">
                                 Sign up
                             </span>
                         </NavLink>
-                        <NavLink
-                            end
-                            to="/administrador/login"
-                            className="nav-link"
-                        >
+                        <NavLink end to="/login" className="nav-link">
                             <span className="btn btn-secondary">Login</span>
                         </NavLink>
                     </Nav>

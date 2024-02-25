@@ -10,8 +10,8 @@ function CardProducto({ producto }) {
         >
             <Card.Img
                 variant="top"
-                src={imagen}
-                style={{ maxHeight: "50%" }}
+                src={imagen}    
+                style={{ height: "50%" }}
                 className="img-fluid object-fit-cover"
             />
             <Card.Body>
