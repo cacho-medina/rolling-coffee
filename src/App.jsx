@@ -4,7 +4,7 @@ import Footer from "./components/common/Footer";
 import Home from "./components/pages/Home";
 import Admin from "./components/pages/Admin";
 import Error from "./components/pages/Error";
-import DetalleProducto from "./components/pages/producto/detalleProducto";
+import DetalleProducto from "./components/pages/producto/DetalleProducto";
 import Formulario from "./components/pages/producto/crear/CrearProducto";
 import Login from "./components/pages/Login/Login";
 import Signup from "./components/pages/Login/Signup";
