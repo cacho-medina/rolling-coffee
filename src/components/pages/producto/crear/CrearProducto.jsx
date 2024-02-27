@@ -2,7 +2,11 @@ import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
-import { crear, getProductoById } from "../../../../helpers/queries";
+import {
+    crear,
+    getProductoById,
+    modificarProducto,
+} from "../../../../helpers/queries";
 import Swal from "sweetalert2";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -20,10 +24,24 @@ function CrearProducto({ editar, title }) {
     } = useForm();
     const onSubmit = async (data) => {
         if (editar) {
-            //EDITANDO
+            const res = await modificarProducto(data, id);
+            if (!res.ok) {
+                Swal.fire({
+                    title: "Error",
+                    text: "Algo salio mal!",
+                    icon: "error",
+                });
+            } else {
+                Swal.fire({
+                    title: "Listo!",
+                    text: "Producto editado con exito!",
+                    icon: "success",
+                });
+                navigate("/administrador");
+            }
         } else {
             const res = await crear(data);
-            if (res.status !== 201) {
+            if (!res.ok) {
                 Swal.fire({
                     title: "Error",
                     text: "Algo salio mal!",

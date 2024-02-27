@@ -43,3 +43,18 @@ export const getProductoById = async (id) => {
         console.log(error);
     }
 };
+
+export const modificarProducto = async (producto, id) => {
+    try {
+        const res = await fetch(`${URI_Producto}/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(producto),
+        });
+        return res;
+    } catch (error) {
+        console.log(error);
+    }
+};
