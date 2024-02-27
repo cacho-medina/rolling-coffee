@@ -58,3 +58,20 @@ export const modificarProducto = async (producto, id) => {
         console.log(error);
     }
 };
+
+const userAdmin = {
+    email: "admin@gmail.com",
+    password: "admin123",
+};
+
+export const iniciarSesion = (user) => {
+    if (
+        user.email === userAdmin.email &&
+        user.password === userAdmin.password
+    ) {
+        sessionStorage.setItem("loginRC", JSON.stringify(user));
+        return true;
+    } else {
+        return false;
+    }
+};
