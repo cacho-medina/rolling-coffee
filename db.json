@@ -35,6 +35,15 @@
       "categoria": "infusiones",
       "descBreve": "Cafe rico y good",
       "descAmplia": "cafe rico y god. Porveniendeajfklfjkhjfashkjlfhdsjnhxskjdhcfnsle"
+    },
+    {
+      "id": "8313",
+      "nombre": "ejemplo",
+      "precio": "9999",
+      "imagen": "https://t3.ftcdn.net/jpg/04/19/17/68/360_F_419176802_9s4AoYMfzxDt3kaSYV55whCkTB76NsHN.jpg",
+      "categoria": "salado",
+      "descBreve": "ejemplo ejemplo ejemplo",
+      "descAmplia": "ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo"
     }
   ],
   "usuarios": [

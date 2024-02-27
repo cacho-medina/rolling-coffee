@@ -1,8 +1,10 @@
 import { Container, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+    const navigate = useNavigate();
     const {
         register,
         handleSubmit,
@@ -10,6 +12,7 @@ function Login() {
     } = useForm();
     const onSubmit = async (data) => {
         console.log(data);
+        navigate("/");
     };
     return (
         <Container fluid className="grow grid px-1">
@@ -19,7 +22,7 @@ function Login() {
             >
                 <h1 className="display-1 fw-medium">Bienvenido</h1>
                 <p className="fs-5">Inicia sesion con tu cuenta</p>
-                <Form.Group>
+                <Form.Group controlId="email">
                     <Form.Label>correo electronico</Form.Label>
                     <Form.Control
                         type="email"
@@ -33,7 +36,7 @@ function Login() {
                         </Form.Text>
                     )}
                 </Form.Group>
-                <Form.Group>
+                <Form.Group controlId="password">
                     <Form.Label>contraseña</Form.Label>
                     <Form.Control
                         /* type="password" */

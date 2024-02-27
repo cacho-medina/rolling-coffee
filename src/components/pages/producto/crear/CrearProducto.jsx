@@ -1,13 +1,15 @@
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-    import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { crear, getProductoById } from "../../../../helpers/queries";
 import Swal from "sweetalert2";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function CrearProducto({ editar, title }) {
+    const navigate = useNavigate();
     const { id } = useParams();
     const {
         register,
@@ -34,6 +36,7 @@ function CrearProducto({ editar, title }) {
                     icon: "success",
                 });
                 reset();
+                navigate("/administrador");
             }
         }
     };
