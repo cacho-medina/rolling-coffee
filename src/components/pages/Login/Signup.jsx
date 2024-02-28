@@ -10,8 +10,8 @@ function Signup() {
         setValue,
     } = useForm();
     return (
-        <Container fluid className="grow grid px-1">
-            <Form className="min shadow d-flex flex-column text-center justify-content-around gap-2 p-2 p-sm-3 my-2 px-lg-5 py-lg-3 border border-success rounded">
+        <Container fluid className="grow grid px-2">
+            <Form className="min mx-auto shadow d-flex flex-column text-center justify-content-around gap-2 p-2 border border-success rounded py-4 py-md-4 px-2 px-md-5">
                 <h1 className="display-1 fw-medium">Bienvenido</h1>
                 <p className="fs-5">Registrate como nuevo usuario</p>
                 <Form.Group>

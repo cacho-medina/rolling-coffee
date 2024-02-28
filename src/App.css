@@ -24,11 +24,12 @@
     height: 500px;
 }
 .min {
-    min-width: 280px;
+    width: 100%;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     color: #fff;
+    max-width: 500px !important;
 }
 .min input {
     background-color: transparent !important;
@@ -38,12 +39,11 @@
     }
 }
 .grid {
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
     background-image: url("./assets/banner2.jpg");
     background-size: cover;
 }
-
 .text-light-green {
     color: var(--light-green) !important;
 }

@@ -24,9 +24,9 @@ function Login() {
         }
     };
     return (
-        <Container fluid className="grow grid px-1">
+        <Container fluid className="grow grid px-2">
             <Form
-                className="min shadow d-flex flex-column text-center justify-content-around gap-2 p-2 p-sm-3 my-2 p-lg-5 border border-success rounded"
+                className="min mx-auto shadow d-flex flex-column text-center justify-content-around gap-2 border border-success rounded py-4 py-md-4 px-2 p-sm-3 px-md-5"
                 onSubmit={handleSubmit(onSubmit)}
             >
                 <h1 className="display-1 fw-medium">Bienvenido</h1>

@@ -24,7 +24,7 @@ function Admin() {
                 <h1 className="display-3 fw-medium">Productos Disponibles</h1>
                 <Link
                     to="/administrador/crearProducto"
-                    className="btn btn-primary"
+                    className="btn btn-success"
                 >
                     <FiFilePlus /> Agregar
                 </Link>
@@ -46,15 +46,23 @@ function Admin() {
                     </tr>
                 </thead>
                 <tbody>
-                    {productos?.map((item) => {
-                        return (
-                            <ItemProd
-                                producto={item}
-                                key={item.id}
-                                setProductos={setProductos}
-                            />
-                        );
-                    })}
+                    {!productos.length ? (
+                        <tr>
+                            <td colSpan={6} className="text-danger">
+                                No hay productos cargadas
+                            </td>
+                        </tr>
+                    ) : (
+                        productos?.map((item) => {
+                            return (
+                                <ItemProd
+                                    producto={item}
+                                    key={item.id}
+                                    setProductos={setProductos}
+                                />
+                            );
+                        })
+                    )}
                 </tbody>
             </Table>
         </Container>

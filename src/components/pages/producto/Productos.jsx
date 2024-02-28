@@ -20,7 +20,15 @@ function Productos() {
             <hr />
             <div className="container-fluid">
                 <div className="row justify-content-center align-items-center gap-3 px-2">
-                    {productos?.map(item => <CardProducto producto={item} key={item.id}/>)}
+                    {!productos.length ? (
+                        <p className="text-center display-6 text-danger">
+                            No hay productos
+                        </p>
+                    ) : (
+                        productos?.map((item) => (
+                            <CardProducto producto={item} key={item.id} />
+                        ))
+                    )}
                 </div>
             </div>
         </div>
