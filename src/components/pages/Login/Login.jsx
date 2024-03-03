@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { iniciarSesion } from "../../../helpers/queries";
 import Swal from "sweetalert2";
 
-function Login() {
+function Login({ setUserLogged }) {
     const navigate = useNavigate();
     const {
         register,
@@ -14,7 +14,13 @@ function Login() {
     } = useForm();
     const onSubmit = (data) => {
         if (iniciarSesion(data)) {
-            navigate("/");
+            Swal.fire({
+                title: "Bienvenido",
+                text: `Ingresaste al sistema rollingCoffee`,
+                icon: "success",
+            });
+            setUserLogged(data.email);
+            navigate("/administrador");
         } else {
             Swal.fire({
                 title: "Error!",
