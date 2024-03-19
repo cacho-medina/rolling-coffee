@@ -69,7 +69,7 @@ export const iniciarSesion = (user) => {
         user.email === userAdmin.email &&
         user.password === userAdmin.password
     ) {
-        sessionStorage.setItem("loginRC", JSON.stringify(user));
+        sessionStorage.setItem("loginRC", JSON.stringify(user.email));
         return true;
     } else {
         return false;

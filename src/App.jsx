@@ -19,7 +19,7 @@ function App() {
     return (
         <>
             {pathname !== "/login" && pathname !== "/signup" ? (
-                <NavBar loggedUser={loggedUser} setUserLogged={setUserLogged}/>
+                <NavBar loggedUser={loggedUser} setUserLogged={setUserLogged} />
             ) : (
                 ""
             )}

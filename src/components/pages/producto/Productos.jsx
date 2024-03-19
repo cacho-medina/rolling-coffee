@@ -26,7 +26,7 @@ function Productos() {
                         </p>
                     ) : (
                         productos?.map((item) => (
-                            <CardProducto producto={item} key={item.id} />
+                            <CardProducto producto={item} key={item._id} />
                         ))
                     )}
                 </div>

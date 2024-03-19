@@ -3,7 +3,7 @@ import { deleteProductos, getProductos } from "../../../helpers/queries";
 import Swal from "sweetalert2";
 
 function ItemProd({ producto, setProductos }) {
-    const { id, nombre, precio, imagen, categoria } = producto;
+    const { _id, nombre, precio, imagen, categoria } = producto;
     const deleteProducto = () => {
         Swal.fire({
             title: "Estas seguro de eliminar el producto?",
@@ -15,7 +15,7 @@ function ItemProd({ producto, setProductos }) {
             confirmButtonText: "Eliminar",
         }).then(async (result) => {
             if (result.isConfirmed) {
-                const res = await deleteProductos(id);
+                const res = await deleteProductos(_id);
                 if (res.status === 200) {
                     Swal.fire({
                         title: "Producto eliminado!",
@@ -41,7 +41,7 @@ function ItemProd({ producto, setProductos }) {
     return (
         <>
             <tr>
-                <td>{id}</td>
+                <td>{_id}</td>
                 <td>{nombre}</td>
                 <td>${precio}</td>
                 <td className="text-truncate" style={{ maxWidth: 150 }}>
@@ -49,7 +49,7 @@ function ItemProd({ producto, setProductos }) {
                 </td>
                 <td>{categoria}</td>
                 <td className="d-flex align-items-center justify-content-center gap-1">
-                    <Options deleteProducto={deleteProducto} id={id}/>
+                    <Options deleteProducto={deleteProducto} id={_id} />
                 </td>
             </tr>
         </>
